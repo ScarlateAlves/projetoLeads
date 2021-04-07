@@ -26,7 +26,7 @@ export default {
 
   css: ['~/assets/scss/main.scss'],
 
-  plugins: [],
+  plugins: ['~/plugins/repository.js'],
 
   components: true,
 
@@ -36,7 +36,11 @@ export default {
     scss: './assets/scss/*.scss',
   },
 
-  modules: [],
+  modules: ['@nuxtjs/axios'],
+
+  axios: {
+    baseURL: 'https://jsonplaceholder.typicode.com/',
+  },
 
   build: {},
 }
