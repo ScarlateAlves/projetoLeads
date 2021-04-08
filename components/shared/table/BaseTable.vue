@@ -6,9 +6,9 @@
           <tr class="leads__title">
             <th>NAME</th>
             <th>EMAIL</th>
-            <th>PHONE</th>
             <th>COMPANY</th>
-            <th></th>
+            <th>PHONE</th>
+            <th>CATEGORIES</th>
           </tr>
         </thead>
         <tbody class="leads__tbody">
@@ -24,12 +24,12 @@
               {{ registro.email }}
             </td>
             <td>
-              {{ registro.phone }}
-            </td>
-            <td>
               {{ registro.company.name }}
             </td>
-            <td>...</td>
+            <td>
+              {{ registro.phone }}
+            </td>
+            <td>{{ registro.company.bs }}</td>
           </tr>
         </tbody>
       </table>
@@ -39,7 +39,11 @@
 
 <script>
 export default {
-  props: ['registros'],
+  props: {
+    registros: {
+      required: true,
+    },
+  },
 }
 </script>
 
@@ -73,9 +77,13 @@ export default {
     padding: 0.5rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    text-align: justify;
+    text-align: left;
     color: rgb(116, 129, 138);
     font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    overflow: auto;
   }
 }
 </style>
