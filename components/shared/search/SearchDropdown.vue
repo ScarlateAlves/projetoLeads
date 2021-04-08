@@ -14,6 +14,7 @@ export default {
 <style scoped lang="scss">
 select {
   width: 40%;
+  min-width: 110px;
   height: 50px;
   font-size: 16px;
   border-radius: 4px;
@@ -22,5 +23,21 @@ select {
   color: rgb(116, 129, 138);
   font-weight: 500;
   padding: 0.5rem;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+select:hover {
+  background: #ffffff;
+  border: 1px solid rgb(116, 129, 138);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  select {
+    width: 80%;
+    margin: auto;
+    max-width: 300px;
+  }
 }
 </style>
