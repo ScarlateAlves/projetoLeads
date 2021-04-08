@@ -50,8 +50,6 @@ export default {
 
 <style lang="scss" scoped="true">
 .leads {
-  font-family: 'Work Sans', sans-serif;
-
   &__container {
     margin-top: 1.4rem;
     padding: 1.4rem 0;
@@ -63,6 +61,39 @@ export default {
     display: flex;
     width: 50%;
     justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      text-align: center;
+      width: 100%;
+    }
+    &__container {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    &__div {
+      display: flex;
+      flex-wrap: wrap;
+      height: 8rem;
+      width: 100%;
+    }
+  }
+  @media (max-width: 388px) {
+    &__container {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    &__div {
+      display: flex;
+      flex-wrap: wrap;
+      height: 8rem;
+      width: 100%;
+    }
   }
 }
 </style>
