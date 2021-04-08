@@ -44,5 +44,38 @@ input {
   background-image: url('~/img/pesquisa.png');
   background-repeat: no-repeat;
   background-position: 10px 15px;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+input:hover {
+  background: #ffffff;
+  border: 1px solid rgb(116, 129, 138);
+  background-image: url('~/img/pesquisa.png');
+  background-repeat: no-repeat;
+  background-position: 10px 15px;
+}
+@media (max-width: 768px) {
+  div {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  input {
+    width: 92%;
+    max-width: 400px;
+  }
+  @media (max-width: 450px) {
+    div {
+      width: 90%;
+      margin: auto;
+    }
+
+    input {
+      width: 89%;
+      max-width: 400px;
+    }
+  }
 }
 </style>
