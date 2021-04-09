@@ -2,9 +2,14 @@
   "name": "vough-leads",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
+    "heroku-postbuild": "nuxt build --prod",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
